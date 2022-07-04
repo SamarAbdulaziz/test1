@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-
+// ahmad branch changes not samar
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -27,3 +27,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+//the change in main
