@@ -5,6 +5,7 @@ void main() {
 }
 // samar change
 
+// ahmad branch changes not samar
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -25,7 +26,6 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
