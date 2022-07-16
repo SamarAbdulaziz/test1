@@ -64,8 +64,7 @@ class ContactItem extends StatelessWidget {
                     ContactsCubit()
                         .get(context)
                         .selectContact(selected: contact);
-                    ContactsCubit()
-                        .get(context).deleteContenct();
+                    ContactsCubit().get(context).deleteContent();
                   },
                   child: Text('Delete'),
                 ),

@@ -84,7 +84,7 @@ class ContactsCubit extends Cubit<ContactsStates> {
     getContactsDatabase();
   }
 
-  void deleteContenct() {
+  void deleteContent() {
     database
         .rawDelete('DELETE FROM contacts WHERE id=${selectedContact['id']}');
     getContactsDatabase();
