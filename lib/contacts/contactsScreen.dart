@@ -9,11 +9,11 @@ class ContactsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Map> contacts = ContactsCubit().get(context).contacts;
     var cubit = ContactsCubit().get(context);
     return BlocConsumer<ContactsCubit, ContactsStates>(
       listener: (context, state) {},
       builder: (context, state) {
+        List<Map> contacts = ContactsCubit().get(context).contacts;
         return Scaffold(
           appBar: AppBar(
             title: const Text(
@@ -25,11 +25,11 @@ class ContactsScreen extends StatelessWidget {
             actions: [
               PopupMenuButton(
                   itemBuilder: (context) => [
-                        PopupMenuItem(
-                          onTap: () => cubit.deleteTable(),
-                          child: Text('Delete All data'),
-                        ),
-                      ])
+                    PopupMenuItem(
+                      onTap: () => cubit.deleteTable(),
+                      child: Text('Delete All data'),
+                    ),
+                  ])
             ],
           ),
           body: Padding(
@@ -42,16 +42,16 @@ class ContactsScreen extends StatelessWidget {
                   itemBuilder: (context, index) =>
                       ContactItem(contact: contacts[index]),
                   separatorBuilder: (context, index) => Container(
-                        height: 1.0,
-                        width: double.infinity,
-                        color: Colors.grey[300],
-                      ),
+                    height: 1.0,
+                    width: double.infinity,
+                    color: Colors.grey[300],
+                  ),
                   itemCount: contacts.length),
             ),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-//              ContactsCubit().get(context).clearControllers();
+              ContactsCubit().get(context).clearControllers();
               Navigator.push(
                 context,
                 MaterialPageRoute(
